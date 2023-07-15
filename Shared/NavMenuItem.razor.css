@@ -1,0 +1,38 @@
+.main-menu-item {
+  position: relative;
+}
+
+.sub-menu {
+  position: absolute;
+  transition: 0.5s;
+  top: 100%;
+  min-width: 100%;
+}
+
+.sub-menu-list {
+  margin-top: 15px;
+  border: 1px solid rgba(136, 143, 166, 1);
+  border-radius: 3px;
+  padding: 15px 20px;
+}
+
+.sub-menu-list::after {
+  content: "";
+  position: absolute;
+  right: 45%;
+  width: 0px;
+  height: 0px;
+  bottom: calc(100% - 15px);
+  border-style: solid;
+  border-width: 15px;
+  border-color: transparent transparent rgba(136, 143, 166, 1) transparent;
+}
+
+.hovered {
+  opacity: 1;
+}
+
+.closed {
+  opacity: 0;
+  pointer-events: none;
+}
