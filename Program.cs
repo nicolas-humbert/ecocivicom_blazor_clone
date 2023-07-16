@@ -1,11 +1,20 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 
+// db access and EFC
+using ecocivicom_blazor_clone.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// See appsettings.json for connection string infos
+var connectionString = builder.Configuration.GetConnectionString("EmployeeDB");
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
+builder.Services.AddDbContextFactory<EmployeeDataContext>(options => options.UseSqlite(connectionString));
 
 var app = builder.Build();
 
