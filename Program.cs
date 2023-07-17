@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Components.Web;
 using ecocivicom_blazor_clone.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using BlazorBootstrap;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,7 @@ var connectionString = builder.Configuration.GetConnectionString("EmployeeDB");
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddDbContextFactory<EmployeeDataContext>(options => options.UseSqlite(connectionString));
+builder.Services.AddBlazorBootstrap();
 
 var app = builder.Build();
 

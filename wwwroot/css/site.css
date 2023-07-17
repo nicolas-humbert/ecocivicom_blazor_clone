@@ -1,18 +1,5 @@
 @import url("open-iconic/font/css/open-iconic-bootstrap.min.css");
 
-html,
-body {
-  font-family: "Abel", sans-serif;
-}
-
-*,
-::before,
-::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 /* --------------------- */
 /* Custom colors for now */
 .f-blue {
@@ -45,6 +32,12 @@ body {
 .bg-lightblue {
   background-color: #67adce;
 }
+.f-light {
+  color: #ffffff;
+}
+.bg-light {
+  background-color: #ffffff;
+}
 .f-orange {
   color: #e67e23;
 }
@@ -56,6 +49,12 @@ body {
 }
 .bg-red {
   background-color: #a72626;
+}
+.f-purple {
+  color: rgb(113, 5, 163);
+}
+.bg-purple {
+  background-color: rgb(113, 5, 163);
 }
 /* Custom colors for now */
 /* --------------------- */
@@ -77,6 +76,10 @@ h1:focus {
 a,
 .btn-link {
   color: #0071c1;
+}
+
+a:hover {
+  color: unset;
 }
 
 .btn-primary {

@@ -17,6 +17,7 @@
   width: 0px;
   height: 0px;
   top: 100%;
+  right: calc(50% - 15px);
   border-style: solid;
   border-width: 15px;
   border-color: rgba(38, 71, 137, 1) transparent transparent transparent;
