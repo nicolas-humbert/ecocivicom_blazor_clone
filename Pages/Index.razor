@@ -1,5 +1,49 @@
 ﻿@page "/"
 
 <PageTitle>Home</PageTitle>
+<div class="container">
+  @* MAIN TITLE *@
+  <div class="main-title-wrapper w-100 bg-blue f-light flex-center flex-column">
+    <h1 class="fs-2 text-center my-3">Formations Professionnelles et Safety Days Prévention en Entreprise</h1>
+    <div class="fs-6 w-100 border-top flex-center py-2">
+    @for (int i = 0; i < HighlightedElements.Count; i++)
+    {
+      int j = i;
+      <NavLink href="@HighlightedElements[j].Href" class="f-light">
+        @HighlightedElements[j].Name
+      </NavLink>
+      @if (i != HighlightedElements.Count - 1)
+      {
+        <span class="mx-2 fs-3">-</span>
+      }
+    }
+    </div>
+  </div>
 
-<h1>ECOCIVICOM - ACCUEIL</h1>
+  @* CTA *@
+  <div class="cta-wrapper bg-purple f-light flex-center">
+    <div class="cta-icons flex-center flex-column">
+      <NavLink href="@knowMoreLink">
+        <span class="oi oi-people fs-1 f-light m-4" aria-hidden="true"></span>
+      </NavLink>
+      <NavLink href="@knowMoreLink">
+        <span class="oi oi-people fs-1 f-light m-4" aria-hidden="true"></span>
+      </NavLink>
+    </div>
+    <div class="cta-text">
+      <h2 class="fs-3">
+        <u>Nouveau !</u> : Nos solutions de formation à distance
+      </h2>
+      <p class="fs-4">
+        Nous proposons des <u>formations</u>, des <u>ateliers Safety Day</u> et des <u>conférences</u> à distance (formation distanciel). Pour  avoir plus d'informations, c'est par ici ... 
+      <NavLink href="@knowMoreLink">
+        EN SAVOIR PLUS
+      </NavLink>
+      </p>
+    </div>
+    <div class="cta-video">
+<iframe width="350" height="220" src="https://www.youtube.com/embed/a12oXbei3YA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
