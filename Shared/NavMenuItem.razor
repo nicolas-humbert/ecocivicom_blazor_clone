@@ -1,6 +1,6 @@
-<li 
-class="p-0 m-0 h-100 main-menu-item" 
-@onmouseenter="triggerMenu" 
+<li
+  class="p-0 m-0 h-100 main-menu-item"
+@onmouseenter="triggerMenu"
 @onmouseleave="triggerMenu"
 >
   <NavLink
@@ -12,39 +12,23 @@ class="p-0 m-0 h-100 main-menu-item"
     @Name
   </NavLink>
 
-@if (SubElements.Count != 0)
-{
-  <div class="sub-menu bg-light @(isHovered ? "open" : "closed")">
-    <ul class="sub-menu-list list-unstyled">
-    @foreach (MainMenuSubElement sube in SubElements)
-      {
-        <li>
-          <NavLink
-            class="nav-link text-nowrap py-0 px-3 h-100 f-mgray"
-            href="@sube.Href"
-          >
-            @sube.Name
-          </NavLink>
-        </li>
-      }
-    </ul>
-  </div>
-}
+  @if (SubElements.Count != 0)
+  {
+    <div class="sub-menu bg-light @(isHovered ? "open" : "closed")">
+      <ul class="sub-menu-list list-unstyled">
+        @foreach (MainMenuSubElement subElement in SubElements)
+        {
+          <li>
+            <NavLink
+              class="nav-link text-nowrap py-0 px-3 h-100 f-mgray"
+              href="@subElement.Href"
+            >
+              @subElement.Name
+            </NavLink>
+          </li>
+        }
+      </ul>
+    </div>
+  }
 </li>
 
-@code {
-  [CascadingParameter(Name = "Name")]
-  public string Name { get; set; } = String.Empty; 
-  [CascadingParameter(Name = "Href")]
-  public string Href { get; set; } = String.Empty;
-
-  [CascadingParameter]
-  public List<MainMenuSubElement> SubElements {get; set;} = new List<MainMenuSubElement>();
-
-  public bool isHovered = false;
-
-  public void triggerMenu()
-  {
-    isHovered = !isHovered;
-  }
-  } 
