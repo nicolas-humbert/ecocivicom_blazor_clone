@@ -1,0 +1,25 @@
+<div class="atelier-formation-card f-light p-4 @MainColor">
+  <div class="afc-header flex-center flex-column">
+    <div class="afc-image-wrapper text-center">
+      <img src="@ImageLink" alt="@ImageAlternativeText" class="afc-image mb-4">
+    </div>
+    <h3 class="afc-title text-center mt-4 fs-3">
+      <NavLink href="@TitleWithLink.Href" class="f-light">
+        @TitleWithLink.Name
+      </NavLink>
+    </h3>
+  </div>
+  <p class="afc-description text-justify fs-6 border-top border-light pt-4 mt-2">
+    @Description
+  </p>
+  <ul class="afc-links">
+    @foreach (CasualLink link in Links)
+    {
+      <li class=" my-3">
+        <NavLink href="@link.Href" class="f-light fs-4">
+          @link.Name
+        </NavLink>
+      </li>
+    }
+  </ul>
+</div>

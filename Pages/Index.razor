@@ -3,7 +3,7 @@
 <PageTitle>Home</PageTitle>
 <div class="container">
   @* MAIN TITLE *@
-  <div class="main-title-wrapper w-100 bg-blue f-light flex-center flex-column mb-5">
+  <div class="main-title-wrapper w-100 bg-blue f-light flex-center flex-column mb-3">
     <h1 class="fs-2 text-center my-3">Formations Professionnelles et Safety Days Prévention en Entreprise</h1>
     <div class="fs-6 w-100 border-top flex-center py-2">
     @for (int i = 0; i < HighlightedElements.Count; i++)
@@ -21,7 +21,7 @@
   </div>
 
   @* CTA *@
-  <div class="cta-wrapper bg-purple f-light flex-center mt-5 p-3">
+  <div class="cta-wrapper bg-purple f-light flex-center p-2 mb-5">
     <div class="cta-icons flex-center flex-column mx-4">
       <NavLink href="@knowMoreLink">
         <Icon Name="IconName.Laptop" Size="IconSize.x5" Color="IconColor.Light" class="fs-1"/>
@@ -36,7 +36,7 @@
       </h2>
       <p class="fs-4 text-justify">
         Nous proposons des <u>formations</u>, des <u>ateliers Safety Day</u> et des <u>conférences</u> à distance (formation distanciel). Pour  avoir plus d'informations, c'est par ici ... 
-      <NavLink href="@knowMoreLink">
+      <NavLink href="@knowMoreLink" class="f-lightblue">
         EN SAVOIR PLUS
       </NavLink>
       </p>
@@ -44,6 +44,65 @@
     <div class="cta-video flex-center">
       <iframe width="300" height="180" src="https://www.youtube.com/embed/a12oXbei3YA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
+  </div>
+
+  @* ATELIERS & FORMATIONS *@
+  <ul class="list-unstyled d-flex align-items-center justify-content-between mb-5">
+    @if (@AtelierFormationCards is not null && @AtelierFormationCards.Count > 0)
+    {
+      @foreach (AtelierFormationCard card in AtelierFormationCards)
+      {
+        <AtelierFormationCard 
+          TitleWithLink =@card.TitleWithLink
+          Description=@card.Description
+          ImageLink=@card.ImageLink
+          ImageAlternativeText=@card.ImageAlternativeText
+          MainColor=@card.MainColor
+          Links=@card.Links
+        />
+      }
+    }
+  </ul>
+
+  @* NOTRE HISTOIRE *@
+  <div class="history text-justify f-lightgray my-4 pt-4">
+    <h3 class="history-title f-mgray text-center pb-4 mb-5">
+      Notre histoire
+    </h3>
+    <p class="fs-6">
+      Créé en 2008, ECOCIVICOM est un organisme de formation spécialisé dans la prévention des risques, 
+      et plus particulièrement sur le  risque routier  et l'éco-conduite. Nos formations en entreprise 
+      sont réalisées sur mesure en intra, afin de répondre aux exigences de nos clients. Nous proposons 
+      aussi un grand choix d'ateliers pour vos journées sécurité ou Safety Day. Nous utilisons différents 
+      matériels de simulation dans l'objectif de rendre ludique nos interventions, et faire adhérer tous 
+      nos stagiaires à la prévention des risques.
+    </p>
+    <p class="fs-6">
+      Nous intervenons sur la France entière grâce à notre réseau de formateurs expérimentés, que nous 
+      avons recruté au fur-et-à mesure des années.
+    </p>
+    <h4 class="f-mgray fw-bold fs-5 mt-4 mb-3">
+      Les formations à l'éco-conduite et au risque routier
+    </h4>
+    <p class="fs-6">
+      Les formations de sensibilisation au risque routier permettent de réduire le taux de mortalité sur la route. 
+      En organisant une formation au risque routier ou à l'éco-conduite, l’employeur remplit ses obligations 
+      légales envers ses salariés tout en améliorant leur sécurité. Ecocivicom utilise des simulateurs véhicules 
+      légers et 2 roues motorisées, mais propose aussi des formations sur route, qui placent le stagiaire en 
+      condition réelle. Celui-ci va pouvoir apprendre les bons réflexes au volant, même dans les situations les 
+      plus imprévues. 
+    </p>
+    <h4 class="f-mgray fw-bold fs-5 mt-4 mb-3">
+      Les ateliers de sensibilisation au risque routier dédiés aux Safety Days
+    </h4>
+    <p class="fs-6">
+      Les ateliers de sensibilisation au risque routier se présentent sous forme de sessions courtes. Ils peuvent 
+      être organisés en complément d’une action de formation ou pour sensibiliser un plus grand nombre de personnes 
+      à la fois. Plusieurs simulateurs (Remorque Test Choc,Voiture Tonneau, Simulateur scooter/moto, simulateur 
+      Voiture,...) permettent de prendre conscience des risques et de leurs conséquences. Organiser une session de 
+      sensibilisation au risque routier en entreprise permet de créer une véritable prise de conscience au sein du 
+      personnel pour faire changer les comportements. 
+    </p>
   </div>
 </div>
 
