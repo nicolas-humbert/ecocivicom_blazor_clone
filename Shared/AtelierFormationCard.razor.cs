@@ -5,6 +5,16 @@ namespace ecocivicom_blazor_clone.Shared
 
     public partial class AtelierFormationCard : ComponentBase
     {
+        public AtelierFormationCard(CasualLink titleWithLink, string description, string imageLink, string imageAlternativeText, List<CasualLink> links, string bgColor = "bg-orange")
+        {
+            TitleWithLink = titleWithLink;
+            Description = description;
+            ImageLink = imageLink;
+            ImageAlternativeText = imageAlternativeText;
+            Links = links;
+            MainColor = bgColor;
+        }
+        public AtelierFormationCard() { }
         [Parameter]
         public CasualLink TitleWithLink { get; set; } = new CasualLink(String.Empty, String.Empty);
         [Parameter]
@@ -14,7 +24,7 @@ namespace ecocivicom_blazor_clone.Shared
         [Parameter]
         public string ImageAlternativeText { get; set; } = "ateliers & formations";
         [Parameter]
-        public string MainColor { get; set; } = String.Empty; // Orange default color see site.css
+        public string? MainColor { get; set; }
         [Parameter]
         public List<CasualLink> Links { get; set; } = new List<CasualLink>();
     }

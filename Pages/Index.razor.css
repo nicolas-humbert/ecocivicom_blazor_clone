@@ -17,12 +17,12 @@
 }
 
 #prestations-interventions-section {
-  height: 350px;
+  height: 380px;
   display: flex;
   align-items: start;
   justify-content: space-between;
 }
 
 .pi-card {
-  width: 48%;
+  width: 45%;
 }
