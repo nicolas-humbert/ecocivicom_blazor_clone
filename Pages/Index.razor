@@ -42,7 +42,7 @@
       </p>
     </div>
     <div class="cta-video flex-center">
-      <iframe width="300" height="180" src="https://www.youtube.com/embed/a12oXbei3YA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="300" height="180" src="https://www.youtube.com/embed/a12oXbei3YA" title="Découvrez nos formations Prévention à distance - Ecocivicom" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
   </div>
 
@@ -82,7 +82,7 @@
       @foreach (AtelierFormationCard card in AtelierFormationCards)
       {
         <AtelierFormationCard 
-          TitleWithLink =@card.TitleWithLink
+          TitleWithLink=@card.TitleWithLink
           Description=@card.Description
           ImageLink=@card.ImageLink
           ImageAlternativeText=@card.ImageAlternativeText
@@ -93,11 +93,21 @@
     }
   </ul>
 
+  @* PRESTATIONS ET INTERVENTIONS *@
+  <div id="prestations-interventions-section">
+    <div class="pi-card text-center">
+      <TitleWithSeparator Name=@SectionTitlePrestations/>
+      <iframe width="300" height="250" src="https://www.youtube.com/embed/z81HZ5jvtsI" title="Présentation Ecocivicom - Formation Risque Routier" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <div class="pi-card text-center">
+      <TitleWithSeparator Name=@SectionTitleInterventions/>
+      <img src="images/carte_france_ecocivicom_v2.webp" alt="carte_france_ecocivicom" width="300" height="250">
+    </div>
+  </div>
+
   @* NOTRE HISTOIRE *@
   <div class="history text-justify f-lightgray my-4 pt-4">
-    <h3 class="history-title f-mgray text-center pb-4 mb-5">
-      Notre histoire
-    </h3>
+    <TitleWithSeparator Name=@SectionTitleHistory/>
     <p class="fs-6">
       Créé en 2008, ECOCIVICOM est un organisme de formation spécialisé dans la prévention des risques, 
       et plus particulièrement sur le  risque routier  et l'éco-conduite. Nos formations en entreprise 

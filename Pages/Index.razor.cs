@@ -49,5 +49,9 @@ namespace ecocivicom_blazor_clone.Pages
                 }
             },
         };
+
+        public string SectionTitlePrestations = "Découvrez nos prestations en vidéo";
+        public string SectionTitleInterventions = "Intervention France Entière";
+        public string SectionTitleHistory = "Notre histoire";
     }
 }
