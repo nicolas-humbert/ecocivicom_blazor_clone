@@ -10,12 +10,13 @@ using BlazorBootstrap;
 var builder = WebApplication.CreateBuilder(args);
 
 // See appsettings.json for connection string infos
-var connectionString = builder.Configuration.GetConnectionString("EmployeeDB");
+var connectionString = builder.Configuration.GetConnectionString("EcocivicomDB");
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddDbContextFactory<EmployeeDataContext>(options => options.UseSqlite(connectionString));
+// builder.Services.AddDbContextFactory<EmployeeDataContext>(options => options.UseSqlite(connectionString));
+builder.Services.AddDbContextFactory<FormationsCategoriesDataContext>(options => options.UseSqlite(connectionString));
 builder.Services.AddBlazorBootstrap();
 
 var app = builder.Build();
