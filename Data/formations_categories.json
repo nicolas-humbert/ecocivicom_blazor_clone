@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "image": "images/formations_categories/form_eco.webp",
+    "slug": "eco-conduite",
+    "description": "COCIVICOM vous accompagne dans votre démarche, en proposant des (formations éco-conduite pour entreprise)[https://www.ecocivicom.com/Formation_eco-conduite.b.htm]. Nous façonnons un programme adapté pour vos salariés, afin de les sensibiliser aux bonnes pratiques de l’éco-conduite."
+  },
+  {
+    "id": 2,
+    "image": "images/formations_categories/form_rr.webp",
+    "slug": "risque-routier",
+    "description": "En formant vos salariés au risque routier, vous pourrez diminuer le taux d'accidentologie de votre entreprise et réduirez également les coûts financiers et humains liés aux accidents de la route."
+  },
+  {
+    "id": 3,
+    "image": "images/formations_categories/form_secu.webp",
+    "slug": "securite",
+    "description": "ECOCIVICOM, a acquis au fur-à-mesure des années de l'expérience dans différents domaines en lien avec la formation des salariés sur les thèmes de la sécurité des Biens et des Personnes."
+  },
+  {
+    "id": 4,
+    "image": "images/formations_categories/form_cv.webp",
+    "slug": "classe-virtuelle",
+    "description": "<u>Nouveau ! :</u> Nous proposons une partie de nos formations en classe virtuelle. Ces formations à distance via visioconférence nous permettent d'échanger et de faire des démonstrations pratiques avec nos stagiaires."
+  },
+  {
+    "id": 5,
+    "image": "images/formations_categories/form_cv.webp",
+    "slug": "classe-virtuelle"
+  }
+]
