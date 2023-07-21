@@ -3,7 +3,7 @@
     "id": 1,
     "image": "images/formations_categories/form_eco.webp",
     "slug": "eco-conduite",
-    "description": "COCIVICOM vous accompagne dans votre démarche, en proposant des (formations éco-conduite pour entreprise)[https://www.ecocivicom.com/Formation_eco-conduite.b.htm]. Nous façonnons un programme adapté pour vos salariés, afin de les sensibiliser aux bonnes pratiques de l’éco-conduite."
+    "description": "COCIVICOM vous accompagne dans votre démarche, en proposant des [formations éco-conduite pour entreprise](https://www.ecocivicom.com/Formation_eco-conduite.b.htm). Nous façonnons un programme adapté pour vos salariés, afin de les sensibiliser aux bonnes pratiques de l’éco-conduite."
   },
   {
     "id": 2,
@@ -22,10 +22,5 @@
     "image": "images/formations_categories/form_cv.webp",
     "slug": "classe-virtuelle",
     "description": "<u>Nouveau ! :</u> Nous proposons une partie de nos formations en classe virtuelle. Ces formations à distance via visioconférence nous permettent d'échanger et de faire des démonstrations pratiques avec nos stagiaires."
-  },
-  {
-    "id": 5,
-    "image": "images/formations_categories/form_cv.webp",
-    "slug": "classe-virtuelle"
   }
 ]

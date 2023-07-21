@@ -1,3 +1,30 @@
-﻿@page "/nos-formations"
+﻿@using Microsoft.EntityFrameworkCore
+@using ecocivicom_blazor_clone.Data
+@using Markdig
 
-<h1>Nos Formations</h1>
+@page "/nos-formations"
+
+@inject IDbContextFactory<FormationsCategoriesDataContext> FormationsCategoriesDataContextFactory;
+
+<div class="container">
+  <h1>Nos formations</h1>
+  <div class="formations-wrapper flex-center justify-content-evenly flex-wrap gap-5 my-5 text-justify">
+    @if (@NosFormations is not null && @NosFormations.Count > 0)
+    {
+      @foreach(var formation in NosFormations)
+      {
+        <div class="formation-card">
+          <NavLink href="@($"nos-formations/{formation.Slug}")">
+          <img class="mb-2" src="@formation.Image" alt="risque routier">
+          </NavLink>
+          @if(formation.Description != String.Empty && formation.Description != null)
+          {
+            var result = Markdown.ToHtml(formation.Description);
+            var markupString = (MarkupString)new MarkupString(result.ToString());
+            @markupString;
+          }
+        </div>
+      }
+    }
+  </div>
+</div>

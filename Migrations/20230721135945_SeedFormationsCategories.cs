@@ -32,11 +32,10 @@ namespace ecocivicom_blazor_clone.Migrations
                 columns: new[] { "Id", "Description", "Image", "Slug" },
                 values: new object[,]
                 {
-                    { 1, "COCIVICOM vous accompagne dans votre démarche, en proposant des (formations éco-conduite pour entreprise)[https://www.ecocivicom.com/Formation_eco-conduite.b.htm]. Nous façonnons un programme adapté pour vos salariés, afin de les sensibiliser aux bonnes pratiques de l’éco-conduite.", "images/formations_categories/form_eco.webp", "eco-conduite" },
+                    { 1, "COCIVICOM vous accompagne dans votre démarche, en proposant des [formations éco-conduite pour entreprise](https://www.ecocivicom.com/Formation_eco-conduite.b.htm). Nous façonnons un programme adapté pour vos salariés, afin de les sensibiliser aux bonnes pratiques de l’éco-conduite.", "images/formations_categories/form_eco.webp", "eco-conduite" },
                     { 2, "En formant vos salariés au risque routier, vous pourrez diminuer le taux d'accidentologie de votre entreprise et réduirez également les coûts financiers et humains liés aux accidents de la route.", "images/formations_categories/form_rr.webp", "risque-routier" },
                     { 3, "ECOCIVICOM, a acquis au fur-à-mesure des années de l'expérience dans différents domaines en lien avec la formation des salariés sur les thèmes de la sécurité des Biens et des Personnes.", "images/formations_categories/form_secu.webp", "securite" },
-                    { 4, "<u>Nouveau ! :</u> Nous proposons une partie de nos formations en classe virtuelle. Ces formations à distance via visioconférence nous permettent d'échanger et de faire des démonstrations pratiques avec nos stagiaires.", "images/formations_categories/form_cv.webp", "classe-virtuelle" },
-                    { 5, "", "images/formations_categories/form_cv.webp", "classe-virtuelle" }
+                    { 4, "<u>Nouveau ! :</u> Nous proposons une partie de nos formations en classe virtuelle. Ces formations à distance via visioconférence nous permettent d'échanger et de faire des démonstrations pratiques avec nos stagiaires.", "images/formations_categories/form_cv.webp", "classe-virtuelle" }
                 });
         }
 

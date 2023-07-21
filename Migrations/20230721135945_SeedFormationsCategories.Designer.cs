@@ -10,7 +10,7 @@ using ecocivicom_blazor_clone.Data;
 namespace ecocivicom_blazor_clone.Migrations
 {
     [DbContext(typeof(FormationsCategoriesDataContext))]
-    [Migration("20230721113650_SeedFormationsCategories")]
+    [Migration("20230721135945_SeedFormationsCategories")]
     partial class SeedFormationsCategories
     {
         /// <inheritdoc />
@@ -44,7 +44,7 @@ namespace ecocivicom_blazor_clone.Migrations
                         new
                         {
                             Id = 1,
-                            Description = "COCIVICOM vous accompagne dans votre démarche, en proposant des (formations éco-conduite pour entreprise)[https://www.ecocivicom.com/Formation_eco-conduite.b.htm]. Nous façonnons un programme adapté pour vos salariés, afin de les sensibiliser aux bonnes pratiques de l’éco-conduite.",
+                            Description = "COCIVICOM vous accompagne dans votre démarche, en proposant des [formations éco-conduite pour entreprise](https://www.ecocivicom.com/Formation_eco-conduite.b.htm). Nous façonnons un programme adapté pour vos salariés, afin de les sensibiliser aux bonnes pratiques de l’éco-conduite.",
                             Image = "images/formations_categories/form_eco.webp",
                             Slug = "eco-conduite"
                         },
@@ -66,13 +66,6 @@ namespace ecocivicom_blazor_clone.Migrations
                         {
                             Id = 4,
                             Description = "<u>Nouveau ! :</u> Nous proposons une partie de nos formations en classe virtuelle. Ces formations à distance via visioconférence nous permettent d'échanger et de faire des démonstrations pratiques avec nos stagiaires.",
-                            Image = "images/formations_categories/form_cv.webp",
-                            Slug = "classe-virtuelle"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Description = "",
                             Image = "images/formations_categories/form_cv.webp",
                             Slug = "classe-virtuelle"
                         });
