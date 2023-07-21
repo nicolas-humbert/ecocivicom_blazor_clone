@@ -7,8 +7,8 @@
 @inject IDbContextFactory<FormationsCategoriesDataContext> FormationsCategoriesDataContextFactory;
 
 <div class="container">
-  <h1>Nos formations</h1>
-  <div class="formations-wrapper flex-center justify-content-evenly flex-wrap gap-5 my-5 text-justify">
+  <TitleWithSeparator MainColor="f-mgray" Name="Nos Formations en Prévention des Risques" HType=@TitleWithSeparatorHType.H1 />
+  <div class="formations-wrapper flex-center justify-content-evenly flex-wrap gap-5 text-justify">
     @if (@NosFormations is not null && @NosFormations.Count > 0)
     {
       @foreach(var formation in NosFormations)

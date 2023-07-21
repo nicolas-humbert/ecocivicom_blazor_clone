@@ -1,3 +1,36 @@
-<h3 class="title-with-separator @MainColor text-center pb-3 mb-5">
-  @Name
-</h3>
+
+@switch (@HType)
+{
+  case TitleWithSeparatorHType.H1:
+    <h1 class="title-with-separator h1 @MainColor text-center pb-3 mb-5">
+      @Name
+    </h1>
+    break;
+
+  case TitleWithSeparatorHType.H2:
+    <h2 class="title-with-separator h2 display-6 @MainColor text-center pb-3 mb-5">
+      @Name
+    </h2>
+    break;
+
+  case TitleWithSeparatorHType.H3:
+    <h3 class="title-with-separator h3 @MainColor text-center pb-3 mb-5">
+      @Name
+    </h3>
+    break;
+
+  case TitleWithSeparatorHType.H4:
+    <h4 class="title-with-separator h4 @MainColor text-center pb-3 mb-5">
+      @Name
+    </h4>
+    break;
+
+  case TitleWithSeparatorHType.H5:
+    <h5 class="title-with-separator h5 @MainColor text-center pb-3 mb-5">
+      @Name
+    </h5>
+    break;
+
+  default:
+      break;
+}
