@@ -59,6 +59,18 @@
 /* Custom colors for now */
 /* --------------------- */
 
+
+/* ----------------------------------- */
+/* Removes double scrollbar on Mozilla */
+html, body {
+    overflow: hidden;
+}
+main {
+    padding-top: 60px;
+}
+/* ----------------------------------- */
+
+
 /* --------------- */
 /* Utility classes */
 .flex-center {
